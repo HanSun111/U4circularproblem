@@ -7,10 +7,12 @@ public class CircularProblem {
     }
     public int onlyOdds(){
         int num = 0;
+        int x;
         while(Math.pow(2, num) < yourNum){
+            x = (int)Math.pow(2, num);
             num++;
         }
 
-        return (int)Math.pow(2, num-1);
+        return (yourNum-x) * 2 + 1;
     }
 }
